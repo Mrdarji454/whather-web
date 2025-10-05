@@ -1,8 +1,18 @@
 // script.js
-let image = document.querySelector(".image");
+  let image = document.querySelector(".image");
+  const city = document.getElementById("search").value;
+  const apiKey = "f99723de71691c10ffae5654f781acee";
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+
+if (city === "Ahmedabad"){
+  getWeather();
+  console.log(getWeather());
+}
 document.getElementById("check").addEventListener("click", getWeather);
 
 async function getWeather() {
+  let image = document.querySelector(".image");
   const city = document.getElementById("search").value;
   const apiKey = "f99723de71691c10ffae5654f781acee";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
