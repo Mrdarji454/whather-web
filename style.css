@@ -165,7 +165,7 @@ button:hover {
     height: 80px;
   }
 }
-.cancel-forecast {
+#cancel-forecast {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(15px);
   border-radius: 20px;
@@ -174,6 +174,9 @@ button:hover {
   text-align: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  visibility:visible;
-  position: calc(top 50%, left 50%);
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

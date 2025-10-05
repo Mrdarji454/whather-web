@@ -5,11 +5,11 @@
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 const cancelbtn = document.querySelector("#cancel");
-const cancelforecast = document.querySelector(".cancel-forecast");
-cancelforecast.addEventListener("click", (e) => {
-  console.log("clicked")
-  cancelforecast.style.visibility = "visible";
-})
+const cancelforecast = document.getElementById("cancel-forecast");
+cancelbtn.addEventListener("click", showCancel);
+function showCancel(){
+  cancelforecast.style.display = "block";
+}
 if (city === "Ahmedabad"){
   getWeather();
   console.log(getWeather());
